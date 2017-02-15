@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=GameSaveManager
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ GameSaveManager\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=int\ getSeed()
+comment1.text=\ This\ routine\ expands\ the\ data\ so\ we\ do\ not\ need\ it\r\n\ \ \ \ public\ static\ String\ makeUserString()\r\n\ \ \ \ {\r\n\ \ \ \ if(null\ \=\=\ saveState)\r\n\ \ \ \ {\r\n\ \ \ \ return\ ("");\r\n\ \ \ \ }\r\n\r\n\ \ \ \ int\ i;\r\n\ \ \ \ int\ k\ \=\ 0;\r\n\ \ \ \ char\ ch\ \=\ (char)0;\r\n\ \ \ \ StringBuffer\ sb\ \=\ new\ StringBuffer();\r\n\r\n\ \ \ \ int\ ul\ \=\ \ ((saveState.length()\ +\ 3)/4)\ *\ 4;\r\n\r\n\ \ \ \ for(i\ \=\ 0\ ;\ i\ <\ ul\ ;i++)\r\n\ \ \ \ {\r\n\ \ \ \ char\ tmpchar\ \=\ '0';\r\n\r\n\ \ \ \ if(i\ <\ saveState.length())\r\n\ \ \ \ {\r\n\ \ \ \ tmpchar\ \=\ saveState.charAt(i);\r\n\ \ \ \ }\r\n\r\n\ \ \ \ tmpchar\ \=\ (char)(tmpchar\ <<\ 4);\r\n\r\n\ \ \ \ switch(tmpchar)\r\n\ \ \ \ {\r\n\ \ \ \ case\ 'F'\:\r\n\ \ \ \ case\ 'E'\:\r\n\ \ \ \ case\ 'D'\:\r\n\ \ \ \ case\ 'C'\:\r\n\ \ \ \ case\ 'B'\:\r\n\ \ \ \ case\ 'A'\:\r\n\ \ \ \ ch\ +\=\ (char)tmpchar\ -\ (char)'A'\ +\ (char)10;\r\n\ \ \ \ break;\r\n\ \ \ \ default\:\r\n\ \ \ \ ch\ +\=\ (char)tmpchar\ -\ (char)'0';\r\n\ \ \ \ break;\r\n\ \ \ \ }\r\n\r\n\ \ \ \ k++;\r\n\ \ \ \ if(k\ >\ 3)\r\n\ \ \ \ {\r\n\r\n\ \ \ \ sb.append(ch);\r\n\ \ \ \ k\ \=\ 0;\r\n\ \ \ \ ch\ \=\ (char)0;\r\n\ \ \ \ }\r\n\ \ \ \ }\r\n\ \ \ \ System.out.println("Len\ Of\ Compressed\ String\ "\ +\ sb.length()\ +\ "\ "\ +\ sb.toString());\r\n\ \ \ \ return(Base64.encode(sb.toString()));\r\n\ \ \ \ }\r\n
+comment2.params=
+comment2.target=boolean\ hasSaveGame()
+comment3.params=
+comment3.target=int\ getX()
+comment4.params=
+comment4.target=int\ getY()
+comment5.params=idx
+comment5.target=int\ getShortInt(int)
+numComments=6

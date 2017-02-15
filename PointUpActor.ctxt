@@ -1,0 +1,17 @@
+#BlueJ class context
+comment0.target=PointUpActor
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ PointUp\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment1.params=
+comment1.target=void\ act()
+comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ PointUp\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment2.params=rotation
+comment2.target=void\ setRotation(int)
+comment3.params=
+comment3.target=int\ getRotation()
+comment4.params=distance
+comment4.target=void\ move(int)
+comment5.params=x\ y
+comment5.target=void\ turnTowards(int,\ int)
+comment6.params=amount
+comment6.target=void\ turn(int)
+numComments=7
